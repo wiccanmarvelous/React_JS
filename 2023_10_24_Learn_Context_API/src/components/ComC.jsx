@@ -1,14 +1,22 @@
 import React from 'react'
-import { Name } from '../App'
+import { fName, lName } from '../App'
 
 const ComC = () => {
   return (
     <>
-      <Name.Consumer>
-        {(name) => {
-          return <h1>My name is {name.fname} {name.lName}</h1>
+      <fName.Consumer>
+        {(fname) => {
+          return (
+            <lName.Consumer>
+              {(lname) => {
+                return (
+                  <h1>My name is {fname} {lname} in Component C.</h1>
+                )
+              }}
+            </lName.Consumer>
+          )
         }}
-      </Name.Consumer>
+      </fName.Consumer>
     </>
   )
 }

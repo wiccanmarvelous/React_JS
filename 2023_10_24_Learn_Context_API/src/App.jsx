@@ -1,26 +1,21 @@
 import React, { createContext } from 'react'
 import ComA from './components/ComA'
 
-const Name = createContext({
-  fname: "",
-  lName: ""
-});
+const fName = createContext();
+const lName = createContext();
 
 const App = () => {
 
-  const providedName = {
-    fname: "Shreyash",
-    lName: "Yadav"
-  }
-
   return (
     <>
-      <Name.Provider value={providedName}>
-        <ComA />
-      </Name.Provider>
+      <fName.Provider value={"Shreyash"}>
+        <lName.Provider value={"Yadav"}>
+          <ComA />
+        </lName.Provider>
+      </fName.Provider>
     </>
   )
 }
 
 export default App;
-export {Name};
+export { fName, lName };
