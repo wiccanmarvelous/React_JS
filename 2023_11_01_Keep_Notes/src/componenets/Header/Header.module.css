@@ -1,0 +1,53 @@
+.header {
+    width: 100%;
+    border-bottom: .1px solid rgb(213, 202, 202);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-logo {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 3rem;
+}
+
+.search-bar {
+    width: 50%;
+    height: 2.5em;
+    background-color: #F1F3F4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    border-radius: 10px;
+}
+
+.search-bar-active {
+    background-color: transparent;
+    box-shadow: 1px 1px 2px 1px #C4C5C6;
+}
+
+.search-icon {
+    width: 1.5em;
+}
+
+.search {
+    border: none;
+    width: 90%;
+    height: 2em;
+    background-color: transparent;
+}
+
+.modification {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
