@@ -1,7 +1,22 @@
 .side-bar {
     height: 100vh;
+    padding: .5rem;
+    margin-left: 2rem;
+    position: relative;
+    border: 1px solid gray;
+    transition: all 2s ease-in-out;
+}
+
+.open {
     width: 20%;
-    padding: 1rem;
+    border: 1px solid gray;
+    transition: all .5s ease-in-out;
+}
+
+.close {
+    border: 1px solid gray;
+    width: 5%;
+    transition: all .5s ease-in-out;
 }
 
 .side-bar-icons {
@@ -24,4 +39,51 @@
 
 .side-bar-icons p {
     padding-left: 2rem;
+    position: relative;
+    transform: translateX(-200%);
+}
+
+.side-bar-icons-enter {
+    animation-name: textShow;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.side-bar-icons-exit {
+    animation-name: textRemove;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes textShow {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textRemove {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
 }

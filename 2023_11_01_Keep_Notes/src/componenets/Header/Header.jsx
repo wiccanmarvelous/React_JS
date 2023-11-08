@@ -8,7 +8,7 @@ import RefreshLight from '../../assets/refresh-light.png';
 import SettingsLight from '../../assets/settings-light.png';
 import XLight from '../../assets/x-light.png';
 
-const Header = () => {
+const Header = (props) => {
     const [searchBarActive, setSearchBarActive] = useState(false);
 
     const searchBarClickHandler = (event) => {
@@ -16,12 +16,17 @@ const Header = () => {
         setSearchBarActive(true);
     }
 
+    const menuButtonClickHandler = (event) => {
+        event.preventDefault();
+        props.setMenuOpen((oldState) => oldState ? false : true);
+    }
+
     return (
         <>
             <header className={classes.header}>
                 <div className={classes["menu-logo"]}>
-                    <img className={classes['menu-img']} src={MenuLineLight} alt="menu line" />
-                    <img className={classes.logo} src={Logo} alt="logo" />
+                    <button onClick={(event) => menuButtonClickHandler(event)}><img className={classes['menu-img']} src={MenuLineLight} alt="menu line" /></button>
+                    <button><img className={classes.logo} src={Logo} alt="logo" /></button>
                     <p className={classes['logo-text']}>Keep</p>
                 </div>
                 <div onClick={(event) => searchBarClickHandler(event)} className={
