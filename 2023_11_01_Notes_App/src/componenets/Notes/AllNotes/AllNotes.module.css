@@ -1,0 +1,6 @@
+.all-notes {
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 50%; */
+}

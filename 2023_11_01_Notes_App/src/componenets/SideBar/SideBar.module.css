@@ -8,13 +8,13 @@
 }
 
 .open {
-    width: 20%;
-    border: 1px solid gray;
+    width: 15%;
+    /* border: 1px solid gray; */
     transition: all .5s ease-in-out;
 }
 
 .close {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     width: 5%;
     transition: all .5s ease-in-out;
 }
@@ -39,7 +39,7 @@
 
 .side-bar-icons p {
     padding-left: 2rem;
-    position: relative;
+    position: absolute;
     transform: translateX(-200%);
 }
 

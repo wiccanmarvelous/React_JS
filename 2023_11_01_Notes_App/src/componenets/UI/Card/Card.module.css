@@ -1,0 +1,22 @@
+.card {
+    min-height: 5rem;
+    height: max-content;
+    width: 10rem;
+    border-radius: 12px;
+    background-color: rgb(238, 55, 86);
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-block;
+}
+
+.card h3 {
+    font-weight: 800;
+    color: black;
+    padding-bottom: .5rem;
+}
+
+.card p {
+    color: black;
+    padding-bottom: 1rem;
+}

@@ -12,7 +12,6 @@ import TrashLight from '../../assets/trash-light.png';
 import TrashDark from '../../assets/trash-dark.png';
 
 const Menu = (props) => {
-  console.log(props.menuOpen);
   return (
     <>
       <div className={`classes['side-bar'] ${props.menuOpen ? classes.open : classes.close}`}>

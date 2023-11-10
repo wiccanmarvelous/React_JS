@@ -1,0 +1,17 @@
+.addItem {
+    width: 100%;
+    text-align: right;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.addItemBtn {
+    border-radius: 100%;
+    background-color: gray;
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    right: 2rem;;
+    bottom: 5rem;
+    cursor: pointer;
+}
