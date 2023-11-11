@@ -1,17 +1,20 @@
 .header {
     width: 100%;
     border-bottom: .1px solid rgb(213, 202, 202);
+    background-color: white;
     padding: .5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
 }
 
 .menu-logo {
     width: 15%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    /* align-items: last baseline; */
+    justify-content: left;
 }
 
 .logo {
@@ -30,7 +33,7 @@
 }
 
 .search-bar-active {
-    background-color: transparent;
+    background-color: white;
     box-shadow: 1px 1px 2px 1px #C4C5C6;
 }
 

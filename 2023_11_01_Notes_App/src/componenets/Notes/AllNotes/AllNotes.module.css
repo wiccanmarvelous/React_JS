@@ -1,6 +1,29 @@
 .all-notes {
+    height: 100%;
+    width: 100%;
     padding: 3rem;
     display: flex;
     flex-wrap: wrap;
-    /* width: 50%; */
+    position: relative;
+}
+
+.emptyPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyPage img {
+    height: 50%;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.emptyPage p {
+    font-size: 3em;
+    margin: 3rem;
 }

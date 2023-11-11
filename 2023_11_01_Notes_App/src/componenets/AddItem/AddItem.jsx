@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './AddItem.module.css';
 import NewNote from '../Notes/NewNote/NewNote';
-import AddIcon from '@mui/icons-material/Add';
+import NoteAddOutlinedIcon from '@mui/icons-material/NoteAddOutlined';
 
 const AddItem = (props) => {
 
@@ -11,9 +11,9 @@ const AddItem = (props) => {
         <>
             <div className={classes.addItem}>
                 <button onClick={() => setAddNote(true)} className={classes.addItemBtn}>
-                    <AddIcon sx={{color: 'black'}} />
+                    <NoteAddOutlinedIcon />
                 </button>
-                {addNote && <NewNote />}
+                {addNote && <NewNote addNotes={props.addNotes} setAddNote={setAddNote} />}
             </div>
         </>
     )

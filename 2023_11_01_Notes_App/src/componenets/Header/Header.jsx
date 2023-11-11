@@ -26,8 +26,8 @@ const Header = (props) => {
             <header className={classes.header}>
                 <div className={classes["menu-logo"]}>
                     <button onClick={(event) => menuButtonClickHandler(event)}><img className={classes['menu-img']} src={MenuLineLight} alt="menu line" /></button>
-                    <button><img className={classes.logo} src={Logo} alt="logo" /></button>
-                    <p className={classes['logo-text']}>Keep</p>
+                    {/* <button><img className={classes.logo} src={Logo} alt="logo" /></button>
+                    <p className={classes['logo-text']}>Keep</p> */}
                 </div>
                 <div onClick={(event) => searchBarClickHandler(event)} className={
                     `${classes["search-bar"]} ${searchBarActive ? classes["search-bar-active"] : ''}`

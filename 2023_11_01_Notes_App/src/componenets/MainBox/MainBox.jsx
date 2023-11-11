@@ -4,6 +4,7 @@ import SideBar from '../SideBar/SideBar';
 import AllNotes from '../Notes/AllNotes/AllNotes';
 
 const MainBox = (props) => {
+
     return (
         <>
             <div className={classes['main-box']}>

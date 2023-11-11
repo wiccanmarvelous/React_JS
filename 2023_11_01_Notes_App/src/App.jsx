@@ -5,133 +5,19 @@ import MainBox from './componenets/MainBox/MainBox';
 import AddItem from './componenets/AddItem/AddItem';
 
 const App = () => {
-    const NotesList = [
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, debitis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, corporis.",
-            backgroundColor: ''
-        },
-        {
-            id: Math.random(),
-            title: "Notes in Hurry",
-            note: "",
-            backgroundColor: ''
-        }
-    ]
     const [menuOpen, setMenuOpen] = useState(false);
-    const [notesList, setNotesList] = useState(NotesList);
+    const [notesList, setNotesList] = useState([]);
     const addNotes = (item) => {
         setNotesList(oldList => [item, ...oldList])
     }
-    
+
     return (
         <>
-            <Header setMenuOpen={setMenuOpen} />
-            <MainBox NotesList={notesList} menuOpen={menuOpen} />
-            <AddItem addNotes={addNotes} />
+            <div className={classes.app}>
+                <Header setMenuOpen={setMenuOpen} />
+                <MainBox NotesList={notesList} menuOpen={menuOpen} />
+                <AddItem addNotes={addNotes} />
+            </div>
         </>
     );
 };
